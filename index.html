@@ -128,3 +128,292 @@
 
         .challenge-card h3 {
             margin-top: 0;
+            color: var(--primary-blue);
+        }
+
+        .modules-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modules-list li {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .module-number {
+            background: var(--primary-blue);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        /* --- GALLERY --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        /* --- CONTACT FORM --- */
+        .contact-section {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-form-container {
+            background: var(--white);
+            max-width: 600px;
+            margin: 40px auto 0;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: left;
+            color: var(--text-dark);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-blue);
+            color: var(--white);
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #003d7a;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 4px solid var(--secondary-blue);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            .header { flex-direction: column; }
+            nav { margin-top: 20px; }
+            nav a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://qualy5.com.au/wp-content/uploads/2021/09/logo-white.png" alt="Qualy5 Logo">
+        </div>
+        <nav>
+            <a href="https://qualy5.com.au/">HOME</a>
+            <a href="https://qualy5.com.au/services/">SERVICES</a>
+            <a href="#">PRODUCTS</a>
+            <a href="#contact">CONTACT US</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Panel Tracking System</h1>
+        <p>A comprehensive ERP & Mobile solution designed to optimize maintenance and inventory for the mining industry.</p>
+        <a href="#contact" class="hero-btn">Request a Demo</a>
+    </div>
+
+    <div class="container">
+        <div class="grid-2 content-block">
+            <div>
+                <h2 class="section-title">Project Overview</h2>
+                <p><strong>The Challenge:</strong> Industries face significant wear and tear issues, necessitating frequent replacement of machines and spare components. It is crucial to determine the exact cause of wear to prevent production delays.</p>
+                <p>Previously, top mining firms relied on unstructured Excel spreadsheets to manage inventory. This was time-consuming and lacked clarity. <strong>Qualy5 developed an ERP dashboard and mobile application</strong> that gives supervisors a 360-degree overview, provides timely alerts, and saves significant effort.</p>
+                
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Mobile & Tablet compatible (Android/iOS)</li>
+                    <li>Cloud-based Data Storage</li>
+                    <li>Real-time Wear & Tear Analytics</li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://placehold.co/600x400/f4f4f4/003366?text=Web+Application+Overview" alt="Web Application Overview" style="width:100%; border-radius:8px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="challenges-wrapper">
+        <div class="container" style="padding:0;">
+            <h2 class="section-title" style="margin-left: 20px;">Challenges Faced</h2>
+            <div class="grid-2">
+                <div>
+                    <div class="challenge-card">
+                        <h3>1. Legacy Paper Forms</h3>
+                        <p>Paper forms are difficult to maintain, prone to loss, and require manual data conversion. This often leads to missing data elements crucial for analysis.</p>
+                    </div>
+                    <div class="challenge-card">
+                        <h3>2. Decentralized Excel Data</h3>
+                        <p>Data collected via Excel is often not centralized, making entry difficult. Analyzing and interpreting isolated spreadsheets is inefficient.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="challenge-card">
+                        <h3>3. Lack of Visual Insights</h3>
+                        <p>It is difficult to visualize and interpret specific screen data points effectively when they are buried in rows of Excel data.</p>
+                    </div>
+                    <img src="https://placehold.co/600x250/003366/ffffff?text=Excel+vs+Dashboard+Visualization" alt="Data Visualization Issue" style="width:100%; border-radius:4px; margin-top:10px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">The Solution & Results</h2>
+        <div class="grid-2">
+            <div>
+                <ul class="modules-list">
+                    <li>
+                        <div class="module-number">1</div>
+                        <div>
+                            <strong>Mobile Application</strong><br>
+                            An app for tablets and mobile phones that permits quick identification and reporting of panel damage. Data is instantly stored in the cloud.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module-number">2</div>
+                        <div>
+                            <strong>Cloud Management</strong><br>
+                            A service that manages and stores information, providing valuable deep insights into operational efficiency.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module-number">3</div>
+                        <div>
+                            <strong>Smart Alerts</strong><br>
+                            Automated notifications for low stock levels and prompts for regular replacements.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <img src="https://placehold.co/600x500/00509e/ffffff?text=Qualy5+ERP+Dashboard+Screenshot" alt="ERP Dashboard Screenshot" style="width:100%; border-radius:8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15);">
+            </div>
+        </div>
+
+        <div class="content-block" style="margin-top: 60px;">
+            <h2 class="section-title">System Visualization</h2>
+            <p>Our solution utilizes Odoo for backend management and custom mobile interfaces for field data collection.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/e0e0e0/333?text=Stock+On+Hand+Report" alt="Stock On Hand Report">
+                    <div class="gallery-caption">Real-time Stock on Hand</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/e0e0e0/333?text=Panel+Wear+Heat+Map" alt="Panel Heat Map">
+                    <div class="gallery-caption">Damage Heat Map Analysis</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://placehold.co/400x300/e0e0e0/333?text=Avg+Lifespan+Analysis" alt="Lifespan Analysis">
+                    <div class="gallery-caption">Panel Lifespan Analytics</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <h2>Interested in the Panel Tracking System?</h2>
+        <p>Get in touch with us to schedule a demo or discuss your requirements.</p>
+        
+        <div class="contact-form-container">
+            <form action="mailto:info@qualy5.com.au" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+61 ...">
+                </div>
+                <div class="form-group">
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="I am interested in the Panel Tracking System for my mining site..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SEND ENQUIRY</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Qualy5 Business Solutions Pty Ltd. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
